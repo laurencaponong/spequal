@@ -29,7 +29,7 @@ class SQMainViewController: UIViewController, PitchEngineDelegate {
     
     func pitchEngineDidRecievePitch(pitchEngine: PitchEngine, pitch: Pitch) {
         //    noteLabel.text = pitch.note.string
-        noteLabel.text = String(pitch.frequency)
+        freqLabel.text = String(pitch.frequency)
         
         let offsetPercentage = pitch.closestOffset.percentage
         let absOffsetPercentage = abs(offsetPercentage)
