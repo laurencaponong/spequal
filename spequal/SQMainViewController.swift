@@ -38,11 +38,11 @@ class SQMainViewController: UIViewController, PitchEngineDelegate {
             return
         }
         
-        let prefix = offsetPercentage > 0 ? "+" : "-"
+//        let prefix = offsetPercentage > 0 ? "+" : "-"
         
-        offsetLabel.text = "\(prefix)" + String(format:"%.2f", absOffsetPercentage) + "%"
-        offsetLabel.textColor = color
-        offsetLabel.hidden = false
+//        offsetLabel.text = "\(prefix)" + String(format:"%.2f", absOffsetPercentage) + "%"
+//        offsetLabel.textColor = color
+//        offsetLabel.hidden = false
     }
     
     func pitchEngineDidRecieveError(pitchEngine: PitchEngine, error: ErrorType) {
