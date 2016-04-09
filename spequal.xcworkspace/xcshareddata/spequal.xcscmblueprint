@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F2D1DF2ACE295F98155A399FB1819BCBDDE39079",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "023C046D7BC226924BBAD83456E847BF59264631" : 0,
+    "F2D1DF2ACE295F98155A399FB1819BCBDDE39079" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8751D811-2FF4-4EB6-A3E4-D9452869C91F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "023C046D7BC226924BBAD83456E847BF59264631" : "..",
+    "F2D1DF2ACE295F98155A399FB1819BCBDDE39079" : "spequal\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "spequal",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "spequal.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/charleshkang\/unit-2-final-project-.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "023C046D7BC226924BBAD83456E847BF59264631"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/charleshkang\/spequal.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F2D1DF2ACE295F98155A399FB1819BCBDDE39079"
+    }
+  ]
+}
