@@ -10,7 +10,8 @@ import AVFoundation
 import UIKit
 
 class ViewController: UIViewController,  AVAudioRecorderDelegate, AVAudioPlayerDelegate {
-
+    
+    
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
     var soundRecorder: AVAudioRecorder!
@@ -58,8 +59,6 @@ class ViewController: UIViewController,  AVAudioRecorderDelegate, AVAudioPlayerD
             soundRecorder.prepareToRecord()
         }
     }
-    
-    
 
     func preparePlayer() {
         var error: NSError?
@@ -150,6 +149,8 @@ class ViewController: UIViewController,  AVAudioRecorderDelegate, AVAudioPlayerD
     func audioPlayerDecodeErrorDidOccur(player: AVAudioPlayer!, error: NSError!) {
         print("Error while playing audio \(error.localizedDescription)")
     }
+    
+    
 
 }
 

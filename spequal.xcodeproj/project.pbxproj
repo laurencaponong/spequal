@@ -14,6 +14,8 @@
 		8977E4241CB89091008BFE27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8977E4221CB89091008BFE27 /* LaunchScreen.storyboard */; };
 		8977E42F1CB89091008BFE27 /* spequalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8977E42E1CB89091008BFE27 /* spequalTests.swift */; };
 		8977E43A1CB89091008BFE27 /* spequalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8977E4391CB89091008BFE27 /* spequalUITests.swift */; };
+		BFC9D98D1CB8AAF60002AE62 /* SQVoiceDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC9D98C1CB8AAF60002AE62 /* SQVoiceDetection.swift */; };
+		BFC9D98F1CB8AD8E0002AE62 /* SQMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC9D98E1CB8AD8E0002AE62 /* SQMainViewController.swift */; };
 		BFDB71EF1CB894A500356F1B /* SQPitchDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDB71EE1CB894A500356F1B /* SQPitchDetection.swift */; };
 		CBB9381746E4A3F251DF0857 /* Pods_spequal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EFC7A0DD30825F1D0236E2 /* Pods_spequal.framework */; };
 /* End PBXBuildFile section */
@@ -51,6 +53,8 @@
 		8977E4391CB89091008BFE27 /* spequalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spequalUITests.swift; sourceTree = "<group>"; };
 		8977E43B1CB89091008BFE27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B574BA33AC3740E13B4896D1 /* Pods-spequal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spequal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-spequal/Pods-spequal.debug.xcconfig"; sourceTree = "<group>"; };
+		BFC9D98C1CB8AAF60002AE62 /* SQVoiceDetection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQVoiceDetection.swift; sourceTree = "<group>"; };
+		BFC9D98E1CB8AD8E0002AE62 /* SQMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQMainViewController.swift; sourceTree = "<group>"; };
 		BFDB71EE1CB894A500356F1B /* SQPitchDetection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQPitchDetection.swift; sourceTree = "<group>"; };
 		D1EFC7A0DD30825F1D0236E2 /* Pods_spequal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_spequal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -116,7 +120,9 @@
 			children = (
 				8977E4191CB89091008BFE27 /* AppDelegate.swift */,
 				8977E41B1CB89091008BFE27 /* ViewController.swift */,
+				BFC9D98E1CB8AD8E0002AE62 /* SQMainViewController.swift */,
 				BFDB71EE1CB894A500356F1B /* SQPitchDetection.swift */,
+				BFC9D98C1CB8AAF60002AE62 /* SQVoiceDetection.swift */,
 				8977E41D1CB89091008BFE27 /* Main.storyboard */,
 				8977E4201CB89091008BFE27 /* Assets.xcassets */,
 				8977E4221CB89091008BFE27 /* LaunchScreen.storyboard */,
@@ -334,8 +340,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFC9D98F1CB8AD8E0002AE62 /* SQMainViewController.swift in Sources */,
 				BFDB71EF1CB894A500356F1B /* SQPitchDetection.swift in Sources */,
 				8977E41C1CB89091008BFE27 /* ViewController.swift in Sources */,
+				BFC9D98D1CB8AAF60002AE62 /* SQVoiceDetection.swift in Sources */,
 				8977E41A1CB89091008BFE27 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
