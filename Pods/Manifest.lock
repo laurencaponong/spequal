@@ -1,12 +1,14 @@
 PODS:
+  - Beethoven (1.0.0):
+    - Pitchy
   - Pitchy (1.0.0)
 
 DEPENDENCIES:
+  - Beethoven
   - Pitchy
 
 SPEC CHECKSUMS:
+  Beethoven: 33b9add13299ea95e84bce44900055ac3c232fe0
   Pitchy: 4e8302612409d07a27c5083f0bbc2a4bd376f1cc
 
-PODFILE CHECKSUM: c7202168a646e0c67aec671d0cdef87abb9c47da
-
-COCOAPODS: 1.0.0.beta.2
+COCOAPODS: 0.38.2
