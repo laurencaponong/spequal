@@ -1,0 +1,3 @@
+# spequal
+
+for ATT hackathon
