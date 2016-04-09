@@ -12,6 +12,10 @@ import Pitchy
 
 class SQMainViewController: UIViewController, PitchEngineDelegate {
     
+    @IBOutlet weak var freqLabel: UILabel!
+    @IBOutlet weak var maleSecondsCounter: UILabel!
+    @IBOutlet weak var femaleSecondsCounter: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

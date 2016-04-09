@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CDs-qc-K0e">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -53,6 +53,61 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-140" y="355"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="4Lh-7o-tQR">
+            <objects>
+                <viewController id="CDs-qc-K0e" customClass="SQMainViewController" customModule="spequal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sWo-Gb-hvs"/>
+                        <viewControllerLayoutGuide type="bottom" id="m3f-FL-jFZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S31-TS-sNc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frequency label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIc-Op-r78">
+                                <rect key="frame" x="219" y="286" width="162.5" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="1IF-Zd-gxU">
+                                <rect key="frame" x="19" y="364" width="383" height="21"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Seconds male talked" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOL-pa-fxQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="159" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Seconds female talked" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wmo-Z6-OeK">
+                                        <rect key="frame" x="209" y="0.0" width="174" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rIc-Op-r78" firstAttribute="centerX" secondItem="S31-TS-sNc" secondAttribute="centerX" id="cgK-Rs-1wk"/>
+                            <constraint firstItem="rIc-Op-r78" firstAttribute="centerY" secondItem="S31-TS-sNc" secondAttribute="centerY" id="kr0-J0-68z"/>
+                            <constraint firstItem="1IF-Zd-gxU" firstAttribute="top" secondItem="rIc-Op-r78" secondAttribute="bottom" constant="50" id="lQE-YH-7dQ"/>
+                            <constraint firstItem="1IF-Zd-gxU" firstAttribute="centerX" secondItem="S31-TS-sNc" secondAttribute="centerX" id="qyR-HN-aK6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="femaleSecondsCounter" destination="Wmo-Z6-OeK" id="lEv-GL-PTb"/>
+                        <outlet property="freqLabel" destination="rIc-Op-r78" id="6ut-Y5-G7E"/>
+                        <outlet property="maleSecondsCounter" destination="aOL-pa-fxQ" id="PHq-nn-bGv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZvO-8L-RSu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="586" y="362"/>
         </scene>
     </scenes>
 </document>
