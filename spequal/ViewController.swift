@@ -64,7 +64,11 @@ class ViewController: UIViewController,  AVAudioRecorderDelegate, AVAudioPlayerD
     func preparePlayer() {
         var error: NSError?
         
-        soundPlayer = AVAudioPlayer(contentsOfURL: getFileURL(), error: &error)
+        do {
+            soundPlayer = try AVAudioPlayer(contentsOfURL: getFileURL(), fileTypeHint: AVFileTypeMPEG4)
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
         
         if let err = error {
             print("Error: \(err.localizedDescription)")
@@ -75,10 +79,7 @@ class ViewController: UIViewController,  AVAudioRecorderDelegate, AVAudioPlayerD
         }
     }
     
-    
-    
-    /////
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -87,7 +88,7 @@ class ViewController: UIViewController,  AVAudioRecorderDelegate, AVAudioPlayerD
     
     @IBAction func playButtonTapped(sender: AnyObject) {
         
-        if (sender.titleLabel?.text == "Play"){
+        if (sender.titleLabel?!.text == "Play"){
             recordButton.enabled = false
             sender.setTitle("Stop", forState: .Normal)
             preparePlayer()
@@ -101,7 +102,7 @@ class ViewController: UIViewController,  AVAudioRecorderDelegate, AVAudioPlayerD
     
     @IBAction func recordButtonTapped(sender: AnyObject) {
         
-        if (sender.titleLabel?.text == "Record"){
+        if (sender.titleLabel?!.text == "Record"){
             soundRecorder.record()
             sender.setTitle("Stop", forState: .Normal)
             playButton.enabled = false
