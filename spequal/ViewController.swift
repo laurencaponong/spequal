@@ -40,8 +40,16 @@ class ViewController: UIViewController,  AVAudioRecorderDelegate {
         ]
         
         var error: NSError?
+
+        do
+        {
+            soundRecorder = try AVAudioRecorder(URL:getFileURL(), settings:[:])
+        }
+        catch let error as NSError
+        {
+            print(error.description)
+        }
         
-        soundRecorder = AVAudioRecorder(URL: getFileURL(), settings: recordSettings, error: &error)
         
         if let err = error {
             print(error?.localizedDescription)
@@ -52,8 +60,24 @@ class ViewController: UIViewController,  AVAudioRecorderDelegate {
     }
     
     
+
+    func preparePlayer() {
+        var error: NSError?
+        
+        soundPlayer = AVAudioPlayer(contentsOfURL: getFileURL(), error: &error)
+        
+        if let err = error {
+            print("Error: \(err.localizedDescription)")
+        } else {
+            soundPlayer.delegate = self
+            soundPlayer.prepareToPlay()
+            soundPlayer.volume = 1.0
+        }
+    }
     
     
+    
+    /////
     
     override func viewDidLoad() {
         super.viewDidLoad()
