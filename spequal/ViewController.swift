@@ -79,16 +79,19 @@ class ViewController: UIViewController,  AVAudioRecorderDelegate, AVAudioPlayerD
         }
     }
     
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+//        
+//        self.playButton.enabled = false
+//        self.recordButton.enabled = false
+//        
     }
     
     
     @IBAction func playButtonTapped(sender: AnyObject) {
         
-        if (sender.titleLabel?!.text == "Play"){
+        if (sender.titleLabel?!.text == "play"){
             recordButton.enabled = false
             sender.setTitle("Stop", forState: .Normal)
             preparePlayer()
@@ -102,14 +105,30 @@ class ViewController: UIViewController,  AVAudioRecorderDelegate, AVAudioPlayerD
     
     @IBAction func recordButtonTapped(sender: AnyObject) {
         
-        if (sender.titleLabel?!.text == "Record"){
-            soundRecorder.record()
-            sender.setTitle("Stop", forState: .Normal)
-            playButton.enabled = false
+//        if (sender.titleLabel?!.text == "record"){
+//            soundRecorder.record()
+//            sender.setTitle("Stop", forState: .Normal)
+//            playButton.enabled = false
+//        } else {
+//            soundRecorder.stop()
+//            sender.setTitle("Record", forState: .Normal)
+//        }
+
+        if (self.soundRecorder?.recording == nil || !self.soundRecorder!.recording) {
+            if (self.soundRecorder?.recording == nil) {
+                setupRecorder()
+            }
+            do {
+                try AVAudioSession.sharedInstance().setActive(true)
+                self.soundRecorder!.record()
+                recordButton.setTitle("Stop Recording", forState: UIControlState.Normal)
+            } catch (_) {}
         } else {
-            soundRecorder.stop()
-            sender.setTitle("Record", forState: .Normal)
+            self.soundRecorder!.stop()
+            recordButton.setTitle("Record", forState: UIControlState.Normal)
         }
+        self.playButton.enabled = true
+        
         
     }
 
