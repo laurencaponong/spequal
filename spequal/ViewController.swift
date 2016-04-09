@@ -9,7 +9,7 @@
 import AVFoundation
 import UIKit
 
-class ViewController: UIViewController,  AVAudioRecorderDelegate {
+class ViewController: UIViewController,  AVAudioRecorderDelegate, AVAudioPlayerDelegate {
 
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
@@ -86,16 +86,50 @@ class ViewController: UIViewController,  AVAudioRecorderDelegate {
     
     
     @IBAction func playButtonTapped(sender: AnyObject) {
+        
+        if (sender.titleLabel?.text == "Play"){
+            recordButton.enabled = false
+            sender.setTitle("Stop", forState: .Normal)
+            preparePlayer()
+            soundPlayer.play()
+        } else {
+            soundPlayer.stop()
+            sender.setTitle("Play", forState: .Normal)
+        }
+        
     }
     
     @IBAction func recordButtonTapped(sender: AnyObject) {
+        
+        if (sender.titleLabel?.text == "Record"){
+            soundRecorder.record()
+            sender.setTitle("Stop", forState: .Normal)
+            playButton.enabled = false
+        } else {
+            soundRecorder.stop()
+            sender.setTitle("Record", forState: .Normal)
+        }
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
+    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool) {
+        playButton.enabled = true
+        recordButton.setTitle("Record", forState: .Normal)
+    }
+    
+    func audioRecorderEncodeErrorDidOccur(recorder: AVAudioRecorder!, error: NSError!) {
+        print("Error while recording audio \(error.localizedDescription)")
+    }
+    
+    func audioPlayerDidFinishPlaying(player: AVAudioPlayer!, successfully flag: Bool) {
+        recordButton.enabled = true
+        playButton.setTitle("Play", forState: .Normal)
+    }
+    
+    func audioPlayerDecodeErrorDidOccur(player: AVAudioPlayer!, error: NSError!) {
+        print("Error while playing audio \(error.localizedDescription)")
+    }
 
 }
 
