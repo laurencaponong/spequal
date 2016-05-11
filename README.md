@@ -1,3 +1,3 @@
 # spequal
 
-for ATT hackathon
+Uses Beethoven Cocoapod
